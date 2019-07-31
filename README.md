@@ -89,7 +89,9 @@ You can download sample database used for examples from [here](https://dev.mysql
 
 you can download description abot the database from [here](https://dev.mysql.com/doc/sakila/en/sakila-authors-note.html)
 
+
 ### Load Sample Database in MySQL
+To load database through command line in linux operating environment.
 ```sql
 
 [amitsa-dt@amitsa]$ mysql -uroot -ppassword
