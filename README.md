@@ -21,7 +21,7 @@ Help us improve this guide - **Fork, Pull Requests, Shares and Likes are recomme
     
 ## MySQL Getting Started
 ### About MySQL
-####What Is MySQL and Why It Is the World’s Most Popular Open Source Database
+#### What Is MySQL and Why It Is the World’s Most Popular Open Source Database
 
 > Summary: this tutorial helps you answer the question: what is MySQL? And give you the reasons why MySQL is the world’s most popular open source database.
 
