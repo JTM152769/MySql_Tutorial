@@ -16,6 +16,8 @@ Help us improve this guide - **Fork, Pull Requests, Shares and Likes are recomme
 
 * [Chapter 01 - MySQL Getting Started](#MySQL-Getting-Started)
     * [About MySQL](#About-MySQL)
+    * [Download Sample Database](#download-sample-database)
+    * [Load Sample Database in MySQL](#load-sample-database)
     
     
     
@@ -26,7 +28,8 @@ Help us improve this guide - **Fork, Pull Requests, Shares and Likes are recomme
 > Summary: this tutorial helps you answer the question: what is MySQL? And give you the reasons why MySQL is the world’s most popular open source database.
 
 To understand MySQL, you need to understand database and SQL first. If you already know database and SQL, you can jump to the What is MySQL section.
-Introduction to database
+
+##### Introduction to database
 
 You deal with data every day…
 
@@ -57,14 +60,13 @@ SQL is the standardized language used to access the database.
 
 SQL contains three parts:
 
-    Data definition language includes statements that help you define the database and its objects, e.g., tables, views, triggers, stored procedures, etc.
-    Data manipulation language contains statements that allow you to update and query data.
-    Data control language allows you to grant the permissions to a user to access specific data in the database.
+    Data definition language(DDL) includes statements that help you define the database and its objects, e.g., tables, views, triggers, stored procedures, etc.
+    Data manipulation language(DML) contains statements that allow you to update and query data.
+    Data control language(DCL) allows you to grant the permissions to a user to access specific data in the database.
 
 Now, you understand database and SQL, and it’s time to answer the next question…
-What is MySQL
 
-MySQL? What?
+What is MySQL?
 
 My is the daughter’s name of the MySQL’s co-founder, Monty Widenius.
 
@@ -81,6 +83,69 @@ MySQL can run on various platforms UNIX, Linux, Windows, etc. You can install it
 >The official way to pronounce MySQL is My Ess Que Ell, not My Sequel. However, you can pronounce it whatever you like, who cares?
 
 If you develop websites or web applications, MySQL is a good choice. MySQL is an essential component of LAMP stack, which includes Linux, Apache, MySQL, and PHP.
+
+### Download Sample Database
+You can download sample database used for examples from [here](https://dev.mysql.com/doc/index-other.html) or from same github repository.
+
+you can download description abot the database from [here](https://dev.mysql.com/doc/sakila/en/sakila-authors-note.html)
+
+### Load Sample Database in MySQL
+```sql
+
+[amitsa-dt@amitsa]$ mysql -uroot -ppassword
+mysql: [Warning] Using a password on the command line interface can be insecure.
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 1041
+Server version: 5.7.22-enterprise-commercial-advanced-log MySQL Enterprise Server - Advanced Edition (Commercial)
+
+Copyright (c) 2000, 2018, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| database           |
+| mysql              |
+| nmsdb              |
+| performance_schema |
+| sys                |
+| tejnmsdb           |
++--------------------+
+7 rows in set (0.00 sec)
+
+mysql> create database sakila;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| database           |
+| mysql              |
+| nmsdb              |
+| performance_schema |
+| sakila             |
+| sys                |
+| tejnmsdb           |
++--------------------+
+8 rows in set (0.00 sec)
+
+##To Load schema and data in sakila database
+[amitsa-dt@amitsa sakila-db]$ mysql -uroot -pIltwat@1 sakila < sakila-schema.sql
+mysql: [Warning] Using a password on the command line interface can be insecure.
+[amitsa-dt@amitsa sakila-db]$ mysql -uroot -pIltwat@1 sakila < sakila-data.sql
+mysql: [Warning] Using a password on the command line interface can be insecure.
+```
+
+
 
 
 
