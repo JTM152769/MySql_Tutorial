@@ -18,6 +18,9 @@ Help us improve this guide - **Fork, Pull Requests, Shares and Likes are recomme
     * [About MySQL](#About-MySQL)
     * [Download Sample Database](#download-sample-database)
     * [Load Sample Database in MySQL](#load-sample-database)
+* [Chapter 02 - Data Manipulation in MySQL](#data-manupulation-in-mysql)
+    * [select Query in MySQL](#select-query-in-mysql)
+   
     
     
     
@@ -146,7 +149,7 @@ mysql: [Warning] Using a password on the command line interface can be insecure.
 [amitsa-dt@amitsa sakila-db]$ mysql -uroot -pIltwat@1 sakila < sakila-data.sql
 mysql: [Warning] Using a password on the command line interface can be insecure.
 ```
-
+## select Query in MySQL
 
 
 
